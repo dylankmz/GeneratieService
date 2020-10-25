@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<paycheck>
+    <user>
+        <id>1</id>
+        <firstname>Jeff</firstname>
+        <lastname>Jefferson</lastname>
+        <registernumber>85.02.01-002.00</registernumber>
+        <maritalstatus>Married</maritalstatus>
+        <address>
+            <street>216</street>
+            <housenumber>Bergensesteenweg</housenumber>
+            <zip>1000</zip>
+            <location>Brussels</location>
+        </address>
+    </user>
+</paycheck>
