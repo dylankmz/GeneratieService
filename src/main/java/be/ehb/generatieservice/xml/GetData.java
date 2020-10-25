@@ -10,6 +10,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
 public class GetData {
+
     public static void main(String[] args) {
         try {
             File file = new File("test.xml");

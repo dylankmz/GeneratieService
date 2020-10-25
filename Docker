@@ -1,0 +1,11 @@
+FROM maven:3.6.3-jdk-11
+
+EXPOSE 8080
+
+COPY . /tmp
+
+WORKDIR /tmp
+
+RUN mvn package && mv /tmp/target/*.jar /app.jar
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
