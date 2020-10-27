@@ -18,7 +18,7 @@ public class UserController extends DefaultHandler {
     private static final String LASTNAME = "lastName";
     private static final String REGISTERNUMBER = "registerNumber";
     private static final String MARITALSTATUS = "maritalStatus";
-    private static final String STREET = "maritalStatus";
+    private static final String STREET = "street";
     private static final String HOUSENUMBER = "houseNumber";
     private static final String ZIP = "zip";
     private static final String LOCATION = "location";
@@ -40,10 +40,10 @@ public class UserController extends DefaultHandler {
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         switch (qName) {
             case USERS:
-                user.userList = new ArrayList<>();
+                user.setUserList(new ArrayList<>());
                 break;
             case USER:
-                user.userList.add(new UserXML());
+                user.getUserList().add(new UserXML());
         }
     }
 
@@ -51,30 +51,31 @@ public class UserController extends DefaultHandler {
         public void endElement(String uri, String localName, String qName) throws SAXException {
             switch (qName) {
                 case ID:
-                    xml().id = elementValue;
+                    xml().setId(elementValue);
                     break;
                 case FIRSTNAME:
-                    xml().firstName = elementValue;
+                    xml().setFirstName(elementValue);
                     break;
                 case LASTNAME:
-                    xml().lastName = elementValue;
+                    xml().setLastName(elementValue);
                     break;
                 case REGISTERNUMBER:
-                    xml().registerNumber = elementValue;
+                    xml().setRegisterNumber(elementValue);
                     break;
                 case MARITALSTATUS:
-                    xml().maritalStatus = elementValue;
+                    xml().setMaritalStatus(elementValue);
+                    break;
                 case STREET:
-                    xml().street = elementValue;
+                    xml().setStreet(elementValue);
                     break;
                 case HOUSENUMBER:
-                    xml().houseNumber = elementValue;
+                    xml().setHouseNumber(elementValue);
                     break;
                 case ZIP:
-                    xml().zip = elementValue;
+                    xml().setZip(elementValue);
                     break;
                 case LOCATION:
-                    xml().location = elementValue;
+                    xml().setLocation(elementValue);
                     break;
             }
         }
