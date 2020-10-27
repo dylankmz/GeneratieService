@@ -9,17 +9,17 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserController extends DefaultHandler {
+public class UserHandler extends DefaultHandler {
 
     private static final String USERS = "users";
     private static final String USER = "user";
     private static final String ID = "id";
-    private static final String FIRSTNAME = "firstName";
-    private static final String LASTNAME = "lastName";
-    private static final String REGISTERNUMBER = "registerNumber";
-    private static final String MARITALSTATUS = "maritalStatus";
+    private static final String FIRSTNAME = "firstname";
+    private static final String LASTNAME = "lastname";
+    private static final String REGISTERNUMBER = "registernumber";
+    private static final String MARITALSTATUS = "maritalstatus";
     private static final String STREET = "street";
-    private static final String HOUSENUMBER = "houseNumber";
+    private static final String HOUSENUMBER = "housenumber";
     private static final String ZIP = "zip";
     private static final String LOCATION = "location";
 
@@ -29,6 +29,7 @@ public class UserController extends DefaultHandler {
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         elementValue = new String(ch, start, length);
+        System.out.println(elementValue);
     }
 
     @Override

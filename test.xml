@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<paycheck>
     <users>
         <user>
             <id>1</id>
@@ -7,10 +6,9 @@
             <lastname>Jefferson</lastname>
             <registernumber>85.02.01-002.00</registernumber>
             <maritalstatus>Married</maritalstatus>
-                <street>216</street>
-                <housenumber>Bergensesteenweg</housenumber>
-                <zip>1000</zip>
-                <location>Brussels</location>
+            <street>Hollywood Boulevard 69</street>
+            <housenumber>216</housenumber>
+            <zip>1000</zip>
+            <location>Brussels</location>
         </user>
     </users>
-</paycheck>

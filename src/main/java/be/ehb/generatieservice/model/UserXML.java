@@ -82,4 +82,19 @@ public class UserXML {
     public void setLocation(String location) {
         this.location = location;
     }
+
+    @Override
+    public String toString() {
+        return "UserXML{" +
+                "id='" + id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", registerNumber='" + registerNumber + '\'' +
+                ", maritalStatus='" + maritalStatus + '\'' +
+                ", street='" + street + '\'' +
+                ", houseNumber='" + houseNumber + '\'' +
+                ", zip='" + zip + '\'' +
+                ", location='" + location + '\'' +
+                '}';
+    }
 }

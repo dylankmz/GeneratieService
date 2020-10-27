@@ -12,9 +12,9 @@ public class SaxParserMain {
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser saxParser = factory.newSAXParser();
+        UserHandler userHandler = new UserHandler();
 
-        UserController userController = new UserController();
-        saxParser.parse("test.xml", userController);
-        System.out.println(userController.getUser());
+        saxParser.parse("test.xml", userHandler);
+        System.out.println(userHandler.getUser());
     }
 }
