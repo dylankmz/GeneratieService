@@ -40,16 +40,54 @@ public class UserController extends DefaultHandler {
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         switch (qName) {
             case USERS:
-                user.
+                user.userList = new ArrayList<>();
+                break;
+            case USER:
+                user.userList.add(new UserXML());
+        }
     }
 
-//    private UserXML xml(){
-//        List<UserXML> userXMLList = user.getUserList();
-//        int lastUserIndex = userXMLList.size() - 1;
-//        return userXMLList.get(lastUserIndex);
-//    }
+        @Override
+        public void endElement(String uri, String localName, String qName) throws SAXException {
+            switch (qName) {
+                case ID:
+                    xml().id = elementValue;
+                    break;
+                case FIRSTNAME:
+                    xml().firstName = elementValue;
+                    break;
+                case LASTNAME:
+                    xml().lastName = elementValue;
+                    break;
+                case REGISTERNUMBER:
+                    xml().registerNumber = elementValue;
+                    break;
+                case MARITALSTATUS:
+                    xml().maritalStatus = elementValue;
+                case STREET:
+                    xml().street = elementValue;
+                    break;
+                case HOUSENUMBER:
+                    xml().houseNumber = elementValue;
+                    break;
+                case ZIP:
+                    xml().zip = elementValue;
+                    break;
+                case LOCATION:
+                    xml().location = elementValue;
+                    break;
+            }
+        }
+
+    private UserXML xml(){
+        List<UserXML> userXMLList = user.getUserList();
+        int lastUserIndex = userXMLList.size() - 1;
+        return userXMLList.get(lastUserIndex);
+    }
 
     public User getUser() {
         return user;
     }
 }
+
+

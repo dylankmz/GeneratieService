@@ -1,21 +1,21 @@
 package be.ehb.generatieservice.model;
 
 public class UserXML {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private int registerNumber;
-    private String maritalStatus;
-    private String street;
-    private int houseNumber;
-    private int zip;
-    private String location;
+    public String id;
+    public String firstName;
+    public String lastName;
+    public String registerNumber;
+    public String maritalStatus;
+    public String street;
+    public String houseNumber;
+    public String zip;
+    public String location;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,11 +35,11 @@ public class UserXML {
         this.lastName = lastName;
     }
 
-    public int getRegisterNumber() {
+    public String getRegisterNumber() {
         return registerNumber;
     }
 
-    public void setRegisterNumber(int registerNumber) {
+    public void setRegisterNumber(String registerNumber) {
         this.registerNumber = registerNumber;
     }
 
@@ -59,19 +59,19 @@ public class UserXML {
         this.street = street;
     }
 
-    public int getHouseNumber() {
+    public String getHouseNumber() {
         return houseNumber;
     }
 
-    public void setHouseNumber(int houseNumber) {
+    public void setHouseNumber(String houseNumber) {
         this.houseNumber = houseNumber;
     }
 
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
 
-    public void setZip(int zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 

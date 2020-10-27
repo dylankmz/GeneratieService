@@ -4,7 +4,7 @@ import java.util.List;
 
 public class User {
 
-    private List<UserXML> userList;
+    public List<UserXML> userList;
 
     public List<UserXML> getUserList() {
         return userList;
