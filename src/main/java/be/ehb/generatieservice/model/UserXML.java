@@ -1,15 +1,15 @@
 package be.ehb.generatieservice.model;
 
 public class UserXML {
-    public String id;
-    public String firstName;
-    public String lastName;
-    public String registerNumber;
-    public String maritalStatus;
-    public String street;
-    public String houseNumber;
-    public String zip;
-    public String location;
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String registerNumber;
+    private String maritalStatus;
+    private String street;
+    private String houseNumber;
+    private String zip;
+    private String location;
 
     public String getId() {
         return id;
