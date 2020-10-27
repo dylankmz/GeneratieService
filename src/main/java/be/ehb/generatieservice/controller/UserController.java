@@ -1,38 +1,55 @@
 package be.ehb.generatieservice.controller;
 
-import be.ehb.generatieservice.dao.UserDAO;
 import be.ehb.generatieservice.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import be.ehb.generatieservice.model.UserXML;
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 
-@Controller
-public class UserController {
+import java.util.ArrayList;
+import java.util.List;
 
-    @Autowired
-    UserDAO dao;
+public class UserController extends DefaultHandler {
 
-    @RequestMapping(value = "all", method = RequestMethod.GET)
-    @ResponseBody
-    public Iterable<User> getAllUsers() {
-        return dao.findAll();
+    private static final String USERS = "users";
+    private static final String USER = "user";
+    private static final String ID = "id";
+    private static final String FIRSTNAME = "firstName";
+    private static final String LASTNAME = "lastName";
+    private static final String REGISTERNUMBER = "registerNumber";
+    private static final String MARITALSTATUS = "maritalStatus";
+    private static final String STREET = "maritalStatus";
+    private static final String HOUSENUMBER = "houseNumber";
+    private static final String ZIP = "zip";
+    private static final String LOCATION = "location";
+
+    private User user;
+    private String elementValue;
+
+    @Override
+    public void characters(char[] ch, int start, int length) throws SAXException {
+        elementValue = new String(ch, start, length);
     }
 
-    @RequestMapping(value = "createUser", method = RequestMethod.GET)
-    @ResponseBody
-    public void savePatient(@RequestParam(value = "firstName") String firstName,
-                            @RequestParam(value = "lastName") String lastName,
-                            @RequestParam(value = "registerNumber") int registerNumber,
-                            @RequestParam(value = "maritalStatus") String maritalStatus,
-                            @RequestParam(value = "street") String street,
-                            @RequestParam(value = "houseNumber") int houseNumber,
-                            @RequestParam(value = "zip") int zip,
-                            @RequestParam(value = "location") String location) {
-        User user = new User(firstName, lastName, registerNumber, maritalStatus, street, houseNumber, zip, location);
-        dao.save(user);
+    @Override
+    public void startDocument() throws SAXException {
+        user = new User();
     }
 
+    @Override
+    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+        switch (qName) {
+            case USERS:
+                user.
+    }
+
+//    private UserXML xml(){
+//        List<UserXML> userXMLList = user.getUserList();
+//        int lastUserIndex = userXMLList.size() - 1;
+//        return userXMLList.get(lastUserIndex);
+//    }
+
+    public User getUser() {
+        return user;
+    }
 }
