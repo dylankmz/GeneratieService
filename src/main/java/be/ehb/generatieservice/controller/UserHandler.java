@@ -1,10 +1,8 @@
 package be.ehb.generatieservice.controller;
 
-import be.ehb.generatieservice.model.User;
 import be.ehb.generatieservice.model.UserXML;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.ArrayList;
@@ -23,8 +21,6 @@ public class UserHandler extends DefaultHandler {
     private boolean bhs = false;
     private boolean bzp = false;
     private boolean blc = false;
-
-
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
