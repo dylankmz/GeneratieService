@@ -1,7 +1,7 @@
 package be.ehb.generatieservice.model;
 
 public class UserXML {
-    private String id;
+    private int id;
     private String firstName;
     private String lastName;
     private String registerNumber;
@@ -11,11 +11,14 @@ public class UserXML {
     private String zip;
     private String location;
 
-    public String getId() {
+    public UserXML() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -85,16 +88,17 @@ public class UserXML {
 
     @Override
     public String toString() {
-        return "UserXML{" +
-                "id='" + id + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", registerNumber='" + registerNumber + '\'' +
-                ", maritalStatus='" + maritalStatus + '\'' +
-                ", street='" + street + '\'' +
-                ", houseNumber='" + houseNumber + '\'' +
-                ", zip='" + zip + '\'' +
-                ", location='" + location + '\'' +
-                '}';
+        StringBuilder builder = new StringBuilder();
+        builder.append("UserXML {").append("id = ").append(id)
+                .append(", FIRSTNAME = ").append(firstName)
+                .append(", LASTNAME = ").append(lastName)
+                .append(", REGISTERNUMBER = ").append(registerNumber)
+                .append(", MARITALSTATUS = ").append(maritalStatus)
+                .append(", STREET = ").append(street)
+                .append(", HOUSENUMBER = ").append(houseNumber)
+                .append(", ZIP = ").append(zip)
+                .append(", LOCATION = ").append(location).append("}");
+
+        return builder.toString();
     }
 }

@@ -11,7 +11,7 @@ public class GetData {
 
     public void getInput() {
         try {
-            File file = new File("test.xml");
+            File file = new File("users.xml");
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newDefaultInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(file);

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <users>
+        <user id = "1">
+            <firstname>Jeff</firstname>
+            <lastname>Jefferson</lastname>
+            <registernumber>85.02.26-602.00</registernumber>
+            <maritalstatus>Married</maritalstatus>
+            <street>Hollywood Boulevard 69</street>
+            <housenumber>234</housenumber>
+            <zip>1000</zip>
+            <location>Brussels</location>
+        </user>
+    <user id = "2">
+        <firstname>Dylan</firstname>
+        <lastname>Karapekmez</lastname>
+        <registernumber>12.05.44-233.54</registernumber>
+        <maritalstatus>Single</maritalstatus>
+        <street>De Boeckstraat</street>
+        <housenumber>35</housenumber>
+        <zip>1800</zip>
+        <location>Vilvoorde</location>
+    </user>
+    </users>
