@@ -13,7 +13,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+//MyRunner klasse die we hebben gemaakt om achteraf te kunnen gebruiken als
+//parser te kunnen gebruiken
 public class MyRunner {
 
     private SAXParser createSaxParser() {

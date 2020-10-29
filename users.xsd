@@ -32,7 +32,7 @@
                             <xs:element name="maritalstatus">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:minLength value="3"/>
+                                        <xs:minLength value="1"/>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
@@ -72,3 +72,4 @@
         </xs:complexType>
     </xs:element>
 </xs:schema>
+

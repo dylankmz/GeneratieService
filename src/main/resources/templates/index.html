@@ -1,21 +1,121 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Blank Page - Generatie Service</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
+    <link href="../static/css/styles.min.css" rel="stylesheet" th:href="@{/css/styles.min.css} "/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
 </head>
-<body>
-<table>
-    <tr th:each= "user : ${users}">
-        <td th:text="${user.firstName}"></td>
-        <td th:text="${user.lastName}"></td>
-        <td th:text="${user.registerNumber}"></td>
-        <td th:text="${user.maritalStatus}"></td>
-        <td th:text="${user.street}"></td>
-        <td th:text="${user.houseNumber}"></td>
-        <td th:text="${user.zip}"></td>
-        <td th:text="${user.location}"></td>
-    </tr>
-</table>
+
+<body id="page-top">
+    <div id="wrapper">
+        <div class="d-inline-flex flex-column" id="content-wrapper">
+            <div id="content" style="filter: blur(0px);margin: 30px;">
+                <nav class="navbar navbar-light navbar-expand border rounded shadow-sm mb-4 topbar static-top" style="margin: 2px;">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <a class="navbar-brand text-capitalize text-primary d-flex d-xl-flex align-items-center align-content-center align-self-center flex-wrap justify-content-xl-center sidebar-brand m-0"
+                            href="#" style="color: rgba(57,53,255,0.9);">
+                            <div class="sidebar-brand-icon rotate-n-15"><i class="fab fa-docker d-xl-flex justify-content-xl-center" style="background-size: auto;"></i></div><span class="mx-auto" style="padding-left: 10px;">Generatie Service</span>
+                            <div class="sidebar-brand-text mx-3"></div>
+                        </a>
+                        <ul class="nav navbar-nav d-xl-flex flex-nowrap ml-auto justify-content-xl-center">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow" role="presentation">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Welcome User</span></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"
+                                        role="menu"><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
+                                        <a
+                                            class="dropdown-item" role="presentation" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
+                                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid d-flex justify-content-xl-center" style="padding-top: 20px;">
+                    <div class="table-responsive table-bordered border rounded border-light shadow" style="opacity: 1;filter: blur(0px);width: 900px;padding-bottom: 0px;height: 446px;overflow-y: hidden;overflow-x: auto;">
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                            <tr class="border-light">
+                                <tr th:each="user : ${users}">
+                                    <td th:text="'User ID: ' + ${user.id}" class="text-center bg-primary border rounded" style="color: rgb(255,255,255);font-size: 17px;font-family: Nunito, sans-serif;width: 400px;" colspan="2"></td>
+                                </tr>
+                                <tr>
+                                <tr th:each="user: ${users}">
+                                    <td style="width: 500px; color: black">Firstname</td>
+                                    <td th:text="${user.firstName}"></td>
+                                </tr>
+                                <tr th:each="user: ${users}">
+                                    <td style="color: black">Lastname</td>
+                                    <td style="width: 500px;" th:text="${user.lastName}"></td>
+                                </tr>
+                                <tr th:each="user: ${users}">
+                                    <td style="color: black">Registernumber</td>
+                                    <td th:text="${user.registerNumber}"></td>
+                                </tr>
+                                <tr th:each="user: ${users}">
+                                    <td style="color: black">Marital status</td>
+                                    <td th:text="${user.maritalStatus}"></td>
+                                </tr>
+                                <tr th:each="user: ${users}">
+                                    <td style="color: black">Street</td>
+                                    <td th:text="${user.street}"></td>
+                                </tr>
+                                <tr th:each="user: ${users}">
+                                    <td style="color: black">Housenumber</td>
+                                    <td th:text="${user.houseNumber}"></td>
+                                </tr>
+                                <tr th:each="user: ${users}">
+                                    <td style="color: black">ZIP</td>
+                                    <td th:text="${user.zip}"></td>
+                                </tr>
+                                <tr th:each="user: ${users}">
+                                    <td style="color: black">Location</td>
+                                    <td th:text="${user.location}"></td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+    <div class="brands"><a data-aos="fade" href="#" style="padding: 0;filter: blur(0px);height: 130px;"> <img data-bs-hover-animate="tada"  src="../static/img/rsz_1vippngcom-java-png-3954241.png" th:src="@{/img/rsz_1vippngcom-java-png-3954241.png}"/> <img data-bs-hover-animate="tada" src="../static/img/docker.png" th:src="@{/img/docker.png}"/><img data-bs-hover-animate="tada"` src="../static/img/thymeleaf.png"  th:src="@{/img/thymeleaf.png}"/><img data-bs-hover-animate="tada" src="../static/img/javaa.png" th:src="@{/img/javaa.png}"/></a></div>
+    <div
+        data-aos="fade" class="footer-basic">
+        <footer>
+            <div class="social" style="opacity: 0.70;"><small class="d-xl-flex justify-content-xl-center align-items-xl-center" style="filter: blur(0px);">Created by</small></div>
+            <ul class="d-flex justify-content-xl-center" style="padding-left: 2pc;">
+                <li><a class="d-xl-flex justify-content-xl-center" href="#">Calvin Aelvoet</a></li>
+                <li><a href="#">Dylan Karapekmez</a></li>
+                <li><a href="#">Abdullah Temiz</a></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p class="copyright">Generatie Service © 2020</p>
+        </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+        <script src="../static/js/script.min.js" th:src="@{/js/script.min.js}"></script>
 </body>
+
 </html>

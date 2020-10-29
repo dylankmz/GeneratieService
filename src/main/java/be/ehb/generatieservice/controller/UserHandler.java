@@ -10,6 +10,7 @@ import java.util.List;
 
 public class UserHandler extends DefaultHandler {
 
+    //Nieuwe instantie van UserXML.
     private List<UserXML> users = new ArrayList<>();
     private UserXML user;
 
@@ -22,6 +23,7 @@ public class UserHandler extends DefaultHandler {
     private boolean bzp = false;
     private boolean blc = false;
 
+    //Startelement methode wordt aangeroepen bij start van elk nieuw element in de xml.
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 
@@ -32,6 +34,7 @@ public class UserHandler extends DefaultHandler {
             user.setId(id);
         }
 
+        //Checkt of XML variabelen ingevuld zijn en indien ja wordt de bool op true gezet.
         switch (qName) {
 
             case "firstname":
@@ -61,6 +64,7 @@ public class UserHandler extends DefaultHandler {
         }
     }
 
+    //Deze methode wordt aangeroepen wanneer de parser text vindt in het element.
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         if (bfn) {
@@ -97,6 +101,7 @@ public class UserHandler extends DefaultHandler {
         }
     }
 
+    //Op het einde van de user element, voegen we het user object toe aan de Users List.
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if ("user".equals(qName)) {
@@ -104,6 +109,7 @@ public class UserHandler extends DefaultHandler {
         }
     }
 
+    //Methode om users alle users te kunnen krijgen.
     public List<UserXML> getUsers() {
         return users;
     }

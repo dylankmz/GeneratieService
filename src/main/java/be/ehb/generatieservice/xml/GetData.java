@@ -7,9 +7,11 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
+//Wordt niet meer gebruikt
 public class GetData {
 
     public void getInput() {
+
         try {
             File file = new File("users.xml");
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newDefaultInstance();

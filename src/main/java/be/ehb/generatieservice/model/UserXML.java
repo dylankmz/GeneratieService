@@ -1,5 +1,6 @@
 package be.ehb.generatieservice.model;
 
+//Onze USERXML klasse met getters en setters
 public class UserXML {
 
     private int id;
@@ -99,6 +100,7 @@ public class UserXML {
         this.location = location;
     }
 
+    //ToString methode
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
