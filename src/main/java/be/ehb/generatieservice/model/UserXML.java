@@ -1,6 +1,7 @@
 package be.ehb.generatieservice.model;
 
 public class UserXML {
+
     private int id;
     private String firstName;
     private String lastName;
@@ -12,6 +13,18 @@ public class UserXML {
     private String location;
 
     public UserXML() {
+    }
+
+    public UserXML(int id, String firstName, String lastName, String registerNumber, String maritalStatus, String street, String houseNumber, String zip, String location) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.registerNumber = registerNumber;
+        this.maritalStatus = maritalStatus;
+        this.street = street;
+        this.houseNumber = houseNumber;
+        this.zip = zip;
+        this.location = location;
     }
 
     public int getId() {
