@@ -13,5 +13,6 @@ public class JavaReadXMLSAX {
         List<UserXML> lines = runner.parseUsers();
 
         lines.forEach(System.out::println);
+
     }
 }

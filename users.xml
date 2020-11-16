@@ -3,12 +3,20 @@
         <user id = "1">
             <firstname>Jeff</firstname>
             <lastname>Jefferson</lastname>
+            <gender>Male</gender>
             <registernumber>85.02.26-602.00</registernumber>
+            <nationality>Belgian</nationality>
             <maritalstatus>Single</maritalstatus>
             <street>Hollywood Boulevard</street>
             <housenumber>7485</housenumber>
             <zip>1000</zip>
             <location>Brussels</location>
+            <phonenumber>32 486 78 98 77</phonenumber>
+            <email>jeffjefferson@gmail.com</email>
+            <date>2019-05-03</date>
+            <banktransfer>true</banktransfer>
+            <iban>BE12465787839875</iban>
+            <bic>BBRUBEBB</bic>
         </user>
     </users>
 <!--Voorbeeld XML user-->

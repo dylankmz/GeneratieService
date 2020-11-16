@@ -16,12 +16,20 @@ public class UserHandler extends DefaultHandler {
 
     private boolean bfn = false;
     private boolean bln = false;
+    private boolean bgn = false;
     private boolean brg = false;
+    private boolean bnt = false;
     private boolean bms = false;
     private boolean bst = false;
     private boolean bhs = false;
     private boolean bzp = false;
     private boolean blc = false;
+    private boolean bpn = false;
+    private boolean bem = false;
+    private boolean bdt = false;
+    private boolean bbt = false;
+    private boolean bib = false;
+    private boolean bic = false;
 
     //Startelement methode wordt aangeroepen bij start van elk nieuw element in de xml.
     @Override
@@ -43,8 +51,14 @@ public class UserHandler extends DefaultHandler {
             case "lastname":
                 bln = true;
                 break;
+            case "gender":
+                bgn = true;
+                break;
             case "registernumber":
                 brg = true;
+                break;
+            case "nationality":
+                bnt = true;
                 break;
             case "maritalstatus":
                 bms = true;
@@ -61,6 +75,24 @@ public class UserHandler extends DefaultHandler {
             case "location":
                 blc = true;
                 break;
+            case "phonenumber":
+                bpn = true;
+                break;
+            case "email":
+                bem = true;
+                break;
+            case "date":
+                bdt = true;
+                break;
+            case "banktransfer":
+                bbt = true;
+                break;
+            case "iban":
+                bib = true;
+                break;
+            case "bic":
+                bic = true;
+                break;
         }
     }
 
@@ -75,9 +107,17 @@ public class UserHandler extends DefaultHandler {
             user.setLastName(new String(ch, start, length));
             bln = false;
         }
+        if(bgn) {
+            user.setGender(new String(ch, start, length));
+            bgn = false;
+        }
         if (brg) {
             user.setRegisterNumber(new String(ch, start, length));
             brg = false;
+        }
+        if(bnt) {
+            user.setNationality(new String(ch, start, length));
+            bnt = false;
         }
         if (bms) {
             user.setMaritalStatus(new String(ch, start, length));
@@ -98,6 +138,30 @@ public class UserHandler extends DefaultHandler {
         if (blc) {
             user.setLocation(new String(ch, start, length));
             blc = false;
+        }
+        if(bpn) {
+            user.setPhoneNumber(new String(ch, start, length));
+            bpn = false;
+        }
+        if(bem) {
+            user.setEmail(new String(ch, start, length));
+            bem = false;
+        }
+        if (bdt) {
+            user.setDate(new String(ch, start, length));
+            bdt = false;
+        }
+        if (bbt) {
+            user.setBankTransfer(new String(ch, start, length));
+            bbt = false;
+        }
+        if (bib) {
+            user.setIban(new String(ch, start, length));
+            bib = false;
+        }
+        if (bic) {
+            user.setBic(new String(ch, start, length));
+            bic = false;
         }
     }
 

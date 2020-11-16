@@ -53,7 +53,5 @@ public class JavaXMLSchemaValidation {
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
     }
-
-
 }
 
