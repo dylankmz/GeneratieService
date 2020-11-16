@@ -14,10 +14,10 @@ public class UserHandler extends DefaultHandler {
     private List<UserXML> users = new ArrayList<>();
     private UserXML user;
 
-    private boolean bfn = false;
-    private boolean bln = false;
-    private boolean bgn = false;
-    private boolean brg = false;
+    private boolean bfn = false; //boolean firstname
+    private boolean bln = false; //boolean lastname
+    private boolean bgn = false; //boolean gender
+    private boolean brg = false; //...
     private boolean bnt = false;
     private boolean bms = false;
     private boolean bst = false;
